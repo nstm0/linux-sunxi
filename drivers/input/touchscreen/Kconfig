@@ -769,4 +769,13 @@ config  TOUCHSCREEN_COASIA
        tristate  "COASIA touchscreen driver"
        help
           COASIA touchscreen driver
+config GOODIX_GT82X_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix GT828X capacitive touch panel"
+	depends on I2C
+	default n
+	help
+		Say Y here if you want to use the Goodix GT828X capacitive panel.
+		
+		To compile this driver as a module, choose M here: the
+		module will be called .
 endif

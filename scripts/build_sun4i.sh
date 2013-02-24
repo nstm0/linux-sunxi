@@ -9,7 +9,7 @@ set -e
 
 #Setup common variables
 export ARCH=arm
-export CROSS_COMPILE=arm-linux-gnueabi-
+export CROSS_COMPILE=arm-none-linux-gnueabi-
 export AS=${CROSS_COMPILE}as
 export LD=${CROSS_COMPILE}ld
 export CC=${CROSS_COMPILE}gcc
@@ -142,7 +142,7 @@ clean_modules()
 	(
 	export LANG=en_US.UTF-8
 	unset LANGUAGE
-	make -C modules/mali LICHEE_MOD_DIR=${LICHEE_MOD_DIR} LICHEE_KDIR=${LICHEE_KDIR} clean
+#	make -C modules/mali LICHEE_MOD_DIR=${LICHEE_MOD_DIR} LICHEE_KDIR=${LICHEE_KDIR} clean
 	)
 	
 	#build swl-n20 sdio wifi module
